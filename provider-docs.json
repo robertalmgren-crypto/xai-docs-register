@@ -1,0 +1,88 @@
+{
+  "version": "2026-08-02",
+  "description": "Agent-friendly provider documentation links for Canvas Agents / GitHub build & maintain agents",
+  "raw_markdown": "https://raw.githubusercontent.com/robertalmgren-crypto/xai-docs-register/main/provider-docs.md",
+  "raw_json": "https://raw.githubusercontent.com/robertalmgren-crypto/xai-docs-register/main/provider-docs.json",
+  "xai_detailed_register": "https://raw.githubusercontent.com/robertalmgren-crypto/xai-docs-register/main/xai-docs-register.md",
+  "providers": [
+    {
+      "id": "xai",
+      "name": "xAI",
+      "priority": 1,
+      "agent_friendly": "high",
+      "notes": "Cleanest for agents. Many pages have .md versions. Docs MCP available.",
+      "links": [
+        {"topic": "function_calling", "url": "https://docs.x.ai/developers/tools/function-calling"},
+        {"topic": "tools_overview", "url": "https://docs.x.ai/developers/tools/overview"},
+        {"topic": "web_search", "url": "https://docs.x.ai/developers/tools/web-search"},
+        {"topic": "models", "url": "https://docs.x.ai/developers/models"},
+        {"topic": "imagine_api", "url": "https://x.ai/api/imagine"},
+        {"topic": "video_generation", "url": "https://docs.x.ai/developers/model-capabilities/video/generation"},
+        {"topic": "docs_mcp", "url": "https://docs.x.ai/api/mcp"},
+        {"topic": "home", "url": "https://docs.x.ai"}
+      ]
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "priority": 2,
+      "agent_friendly": "high",
+      "notes": "Supports /llms.txt and .md on many pages.",
+      "links": [
+        {"topic": "function_calling", "url": "https://developers.openai.com/api/docs/guides/function-calling"},
+        {"topic": "tools", "url": "https://developers.openai.com/api/docs/guides/tools"},
+        {"topic": "home", "url": "https://developers.openai.com/api/docs"},
+        {"topic": "api_reference", "url": "https://developers.openai.com/api/reference/overview"}
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "priority": 3,
+      "agent_friendly": "high",
+      "notes": "Strong tool-use documentation.",
+      "links": [
+        {"topic": "tool_use", "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview"},
+        {"topic": "home", "url": "https://platform.claude.com/docs"}
+      ]
+    },
+    {
+      "id": "google_gemini",
+      "name": "Google Gemini",
+      "priority": 4,
+      "agent_friendly": "medium-high",
+      "notes": "Prefer function-calling, image-generation and video pages. Avoid marketing landings.",
+      "links": [
+        {"topic": "function_calling", "url": "https://ai.google.dev/gemini-api/docs/function-calling"},
+        {"topic": "image_generation", "url": "https://ai.google.dev/gemini-api/docs/image-generation"},
+        {"topic": "video_veo", "url": "https://ai.google.dev/gemini-api/docs/video"},
+        {"topic": "home", "url": "https://ai.google.dev/gemini-api/docs"},
+        {"topic": "api_reference", "url": "https://ai.google.dev/api"}
+      ]
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "priority": 5,
+      "agent_friendly": "high",
+      "notes": "Explicit agent support via /llms.txt and .md on nearly every page.",
+      "links": [
+        {"topic": "tts_convert", "url": "https://elevenlabs.io/docs/api-reference/text-to-speech/convert"},
+        {"topic": "api_reference", "url": "https://elevenlabs.io/docs/api-reference/introduction"},
+        {"topic": "tts_overview", "url": "https://elevenlabs.io/docs/overview/capabilities/text-to-speech"},
+        {"topic": "home", "url": "https://elevenlabs.io/docs/overview/intro"}
+      ]
+    },
+    {
+      "id": "google_cloud",
+      "name": "Google Cloud",
+      "priority": 6,
+      "agent_friendly": "medium",
+      "notes": "Verbose. Extract only parameters, endpoints and limits.",
+      "links": [
+        {"topic": "translation", "url": "https://docs.cloud.google.com/translate/docs"},
+        {"topic": "youtube_data_api", "url": "https://developers.google.com/youtube/v3/docs"}
+      ]
+    }
+  ]
+}

@@ -1,61 +1,46 @@
-# xAI Documentation — Strukturerat Register
+# Provider Docs Register
 
-Agent-vänlig översikt över **xAI Model Capabilities**, Files, Voice, Video, Advanced API och Community.
+Agent-vänligt register över officiella dokumentationssidor för de providers som används i Canvas Agents-pipelines.
 
-Sammanställd från officiell xAI-dokumentation. Avsedd för **alla** agenter och utvecklare (inte bara Grok).
+Avsedd för **GitHub-agenter** som bygger och underhåller kod/pipelines. xAI-registret (detaljerat) finns kvar; övriga providers har rena länkar + prioritet.
 
 ## Snabblänkar för agenter
 
 | Resurs | URL |
 |--------|-----|
 | **Repo** | https://github.com/robertalmgren-crypto/xai-docs-register |
-| **Raw Markdown (fetch)** | https://raw.githubusercontent.com/robertalmgren-crypto/xai-docs-register/main/xai-docs-register.md |
-| **HTML-vy** | https://github.com/robertalmgren-crypto/xai-docs-register/blob/main/xai-docs-register.md |
+| **Provider index (Markdown)** | https://raw.githubusercontent.com/robertalmgren-crypto/xai-docs-register/main/provider-docs.md |
+| **Provider index (JSON)** | https://raw.githubusercontent.com/robertalmgren-crypto/xai-docs-register/main/provider-docs.json |
+| **xAI detaljerat register** | https://raw.githubusercontent.com/robertalmgren-crypto/xai-docs-register/main/xai-docs-register.md |
 
-## Hur agenter hämtar registret
+## Hur agenter hämtar
 
 ```bash
-# Valfri agent / script
+# Hela provider-indexet (Markdown)
+curl -sL https://raw.githubusercontent.com/robertalmgren-crypto/xai-docs-register/main/provider-docs.md
+
+# Maskinläsbart JSON
+curl -sL https://raw.githubusercontent.com/robertalmgren-crypto/xai-docs-register/main/provider-docs.json
+
+# xAI djupregister
 curl -sL https://raw.githubusercontent.com/robertalmgren-crypto/xai-docs-register/main/xai-docs-register.md
 ```
 
-```python
-import urllib.request
-url = "https://raw.githubusercontent.com/robertalmgren-crypto/xai-docs-register/main/xai-docs-register.md"
-text = urllib.request.urlopen(url).read().decode()
-```
-
-MCP-kompatibla klienter kan också peka på den råa URL:en eller clona repot.
-
 ## Innehåll
 
-1. Persisting Generated Output (`storage_options`, public URL)
-2. Referencing Files as Input (`file_id`)
-3. Voice Overview (S2S, TTS, STT)
-4. Ephemeral Tokens
-5. Tools with Grok S2S
-6. Best Practices (Voice)
-7. Custom Voices
-8. Docs MCP Server (`https://docs.x.ai/api/mcp`)
-9. Files — Chat with Files (`attachment_search`)
-10. Managing Files (upload, TTL, list, delete)
-11. Public URLs
-12. Asynchronous Requests
-13. WebSocket Mode (Responses API)
-14. Video Generation
-15. Image-to-Video
-16. Video Editing
-17. Reference-to-Video
-18. Video Extension
-19. Streaming
+- `provider-docs.md` — prioriterad lista med länkar per provider (agentvänlig)
+- `provider-docs.json` — samma data som JSON (för programmatisk användning)
+- `xai-docs-register.md` — detaljerat xAI-register (Model Capabilities, Files, Voice, Video, Tools m.m.)
 
-Se **[xai-docs-register.md](xai-docs-register.md)** för detaljer.
+## Prioritet för GitHub-agenter
 
-## Officiell dokumentation
-
-- [Docs MCP](https://docs.x.ai/api/mcp) — `list_doc_pages`, `get_doc_page`, `search_docs`
-- [docs.x.ai](https://docs.x.ai)
+1. **xAI** — renast, `.md`-vänligt, tools + Imagine
+2. **OpenAI** — function calling + tools
+3. **Anthropic** — tool use
+4. **Google Gemini** — function calling, image, Veo
+5. **ElevenLabs** — TTS (explicit agent-stöd med `/llms.txt`)
+6. **Google Cloud** — Translation, YouTube (mer verbose)
 
 ---
 
-*Senast uppdaterad: 2026-07-26*
+*Senast uppdaterad: 2026-08-02*
